@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Post, Body } from '@nestjs/common';
 import { CreateCatDto } from './dto/create-cats.dto';
 import { CatsService } from './cats.service';
-import { Cat } from './interfaces/cats.interfaces';
+import { Cat } from './cat.entity';
 
 @Controller('cats')
 export class CatsController {
@@ -9,13 +9,17 @@ export class CatsController {
     constructor(private readonly catService: CatsService) {}
 
     @Get()
-    getIndex(): Cat[] {
+    async getIndex(): Promise<Cat[]> {
         return this.catService.findAll();
     }
 
     @Post()
     async create(@Body() createCatDto: CreateCatDto) {
-        this.catService.create(createCatDto);
+        const newCat = new Cat();
+        newCat.name = createCatDto.name;
+        newCat.age = createCatDto.age;
+
+        return this.catService.create(newCat);
     }
 
     @Get(':id')
