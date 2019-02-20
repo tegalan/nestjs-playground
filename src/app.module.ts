@@ -5,17 +5,18 @@ import { CatsController } from './cats/cats.controller';
 import { CatsService } from './cats/cats.service';
 import { CatsModule } from './cats/cats.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CatsGateway } from './cats.gateway';
 
 @Module({
   imports: [
     CatsModule,
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'nest_coba',
+      type: 'sqlite',
+      // host: 'localhost',
+      // port: 3306,
+      // username: 'root',
+      // password: 'root',
+      database: 'database.db',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
