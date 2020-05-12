@@ -22,7 +22,7 @@
   "dependencies": {
     "@nestjs/common": "5.7.2",
     "@nestjs/core": "5.7.2",
-    "@nestjs/typeorm": "5.3.0",
+    "@nestjs/typeorm": "7.0.0",
     "@nestjs/websockets": "5.7.2",
     "@types/socket.io": "2.1.4",
     "mysql": "2.18.1",
