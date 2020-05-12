@@ -28,7 +28,7 @@
     "mysql": "2.18.1",
     "reflect-metadata": "0.1.13",
     "rimraf": "2.6.3",
-    "rxjs": "6.4.0",
+    "rxjs": "6.5.5",
     "sqlite3": "4.0.6",
     "typeorm": "0.2.13",
     "typescript": "3.3.3"
