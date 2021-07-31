@@ -30,7 +30,7 @@
     "rimraf": "3.0.2",
     "rxjs": "7.0.1",
     "sqlite3": "5.0.2",
-    "typeorm": "0.2.35",
+    "typeorm": "0.2.36",
     "typescript": "4.3.5"
   },
   "devDependencies": {
